@@ -50,27 +50,30 @@ const DadosDoCartao = [
   },
 ];
 
+const data = new Date();
+
 export default function Card() {
   return (
     <Container>
       <InfoData>
         <img src={sol} alt="icone-temperatura" />
         <div>
-          <strong>{Math.random().toFixed(2)}</strong>
+          <strong>{data.toLocaleDateString()}</strong>
           <span>Terça-feira</span>
         </div>
       </InfoData>
 
       <Descricao>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          voluptas quos
+          Sol e aumento de nuvens. Pancadas de chuva à tarde. À noite, muitas
+          nuvens, mas sem chuva.
         </p>
       </Descricao>
 
       {DadosDoCartao.map((item) => (
         <InfoDataList key={item.id}>
           <strong>{item.titulo}:</strong>
+
           <div className={item.class}>
             {!item.info.default ? (
               <>

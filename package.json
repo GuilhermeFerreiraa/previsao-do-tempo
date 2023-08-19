@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.26",
+    "cors-anywhere": "^0.4.4",
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.0.7"

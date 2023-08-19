@@ -3,11 +3,15 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 29%;
   flex: none;
-  background: #fefefe;
-  box-shadow: 0px 4px 10px 2px #00000020;
-  border-radius: 12px;
-  padding: 16px 12px;
+  display: flex;
+  max-width: 320px;
+  max-height: 380px;
   margin: 10px 12px;
+  padding: 16px 12px;
+  border-radius: 12px;
+  background: #fefefe;
+  flex-direction: column;
+  box-shadow: 0px 4px 10px 2px #00000020;
 `;
 
 export const InfoData = styled.div`
@@ -19,7 +23,7 @@ export const InfoData = styled.div`
 
   img {
     object-fit: contain;
-    width: 36px;
+    width: 10%;
   }
 
   div {
@@ -31,12 +35,12 @@ export const InfoData = styled.div`
 export const Descricao = styled.div`
   background-color: #eee;
   border-radius: 8px;
-  padding: 2px 8px;
-  width: 90%;
+  padding: 2px 14px;
+
   margin: 0 auto 12px;
 
   p {
-    font-size: 10px;
+    font-size: 12px;
     color: #404040;
   }
 `;
