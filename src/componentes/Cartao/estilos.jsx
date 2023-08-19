@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Caixa = styled.div`
   width: 29%;
   flex: none;
   display: flex;
@@ -115,7 +115,6 @@ export const InfoExtra = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 12px;
-
   border-radius: 6px;
   border-left: 4px solid;
   background: ${({ status }) => (status !== "danger" ? "#ecfaff" : "#FFECEC")};
@@ -129,7 +128,7 @@ export const InfoExtra = styled.div`
   }
 
   p {
-    text-align: center;
+    text-align: left;
     width: 80%;
     color: #41b4d9;
     font-size: 10px;

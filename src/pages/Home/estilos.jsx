@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.main`
+export const Caixa = styled.main`
   box-sizing: border-box;
   max-width: 100vw;
   scroll-behavior: smooth;
   font-family: "Inter", "sans-serif", "arial";
 `;
 
-export const HeaderContainer = styled.div`
+export const CaixaTopo = styled.div`
   width: 80%;
   padding: 8px;
   margin: 16px auto;
@@ -25,7 +25,7 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const ContainerCarousel = styled.section`
+export const CaixaCarrosel = styled.section`
   max-width: 100vw;
   align-items: center;
   display: grid;
@@ -38,7 +38,7 @@ export const ContainerCarousel = styled.section`
   }
 `;
 
-export const ContainerButton = styled.div`
+export const CaixaBotao = styled.div`
   display: flex;
 
   button {
@@ -60,7 +60,7 @@ export const ContainerButton = styled.div`
   }
 `;
 
-export const CarouselItems = styled.div`
+export const ItemCarrosel = styled.div`
   width: 100%;
   height: 65%;
   display: flex;
