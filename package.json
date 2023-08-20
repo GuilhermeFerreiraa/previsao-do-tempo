@@ -1,7 +1,11 @@
 {
   "name": "culttivo-previsao-do-tempo",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.19.3"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
