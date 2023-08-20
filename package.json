@@ -3,9 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "engines": {
-    "node": "16.x",
+    "node": "14.x",
     "npm": "8.19.3"
-  },
+  },  
   "type": "module",
   "scripts": {
     "dev": "vite",
