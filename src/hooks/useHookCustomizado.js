@@ -1,39 +1,29 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import DadosDaPrevisao from "../services/ObterDados";
 
 export default function useHookCustomizado() {
   const [dados, setDados] = useState([]);
-  const [nomeDoEstado, setNomeDoEstado] = useState("");
+  const [nomeDaCidade, setNomeDaCidade] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const carrosel = useRef(null);
 
   useEffect(() => {
     (async () => {
       try {
         const resposta = await DadosDaPrevisao.obterDados();
-        setNomeDoEstado(resposta.name);
+        setNomeDaCidade(resposta.name);
         setDados(resposta.data);
         setIsLoading(false);
       } catch (error) {
-        console.log("Não foi possível obter os dados: ", error);
-      } finally {
         setIsLoading(false);
+        console.log("Não foi possível obter os dados: ", error);
       }
     })();
   }, []);
 
-  const RolarParaDireita = useCallback((e) => {
-    const tamanhoDaTela = carrosel.current.offsetWidth / 3;
-    e.preventDefault();
-    carrosel.current.scrollLeft += tamanhoDaTela;
-  }, []);
-
-  const RolarParaEsquerda = useCallback((e) => {
-    const tamanhoDaTela = carrosel.current.offsetWidth / 3;
-    e.preventDefault();
-    carrosel.current.scrollLeft -= tamanhoDaTela;
-  }, []);
+  const formataData = (horario) => {
+    return horario?.replace(/:\d{2}$/, "");
+  };
 
   const diasDaSemana = [
     "Segunda-feira",
@@ -49,10 +39,8 @@ export default function useHookCustomizado() {
     dados,
     setDados,
     isLoading,
-    nomeDoEstado,
-    carrosel,
+    formataData,
+    nomeDaCidade,
     diasDaSemana,
-    RolarParaDireita,
-    RolarParaEsquerda,
   };
 }

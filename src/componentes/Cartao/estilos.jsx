@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const Caixa = styled.div`
-  width: 29%;
-  flex: none;
-  display: flex;
   max-width: 320px;
   max-height: 380px;
-  margin: 10px 12px;
+  min-height: 380px;
+  margin: 10px 50px;
   padding: 16px 12px;
   border-radius: 12px;
   background: #fefefe;
@@ -45,7 +43,7 @@ export const Descricao = styled.div`
   }
 `;
 
-export const InfoDataList = styled.div`
+export const ResumoDoDia = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;

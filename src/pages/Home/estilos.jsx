@@ -13,7 +13,7 @@ export const CaixaTopo = styled.div`
   margin: 16px auto;
   background-color: "#eee";
   border-radius: 12px;
-  border-top: 10px solid #079e99;
+  border-top: 16px solid #079e99;
   align-items: center;
   box-shadow: 0px 4px 4px #00000025;
 
@@ -25,21 +25,10 @@ export const CaixaTopo = styled.div`
   }
 `;
 
-export const CaixaCarrosel = styled.section`
-  max-width: 100vw;
-  align-items: center;
-  display: grid;
-  height: 85vh;
-  grid-template-columns: 0.2fr 1fr 0.2fr;
-  justify-items: center;
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
-`;
-
 export const CaixaBotao = styled.div`
-  display: flex;
+  background-color: red;
+  /* display: flex; */
+  width: 15%;
 
   button {
     cursor: default;
@@ -47,8 +36,7 @@ export const CaixaBotao = styled.div`
     border: none;
 
     img {
-      width: 45%;
-      height: 45%;
+      height: 15%;
       object-fit: fill;
 
       cursor: pointer;
