@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Caixa = styled.div`
   overflow: hidden;
-  min-width: 80%;
-  height: 340px;
+  min-width: 70%;
+  height: 380px;
   margin: 10px 50px;
-  padding: 16px 12px;
+  padding: 16px 16px;
   border-radius: 12px;
   background: #fefefe;
   flex-direction: column;
@@ -21,12 +21,16 @@ export const InfoData = styled.div`
 
   img {
     object-fit: contain;
-    width: 10%;
+    width: 15%;
   }
 
   div {
     color: #818181;
     display: grid;
+
+    span {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -34,26 +38,31 @@ export const Descricao = styled.div`
   background-color: #eee;
   margin-bottom: 12px;
   border-radius: 8px;
-  padding: 2px 10px;
+  padding: 0 12px;
   height: 50px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   p {
-    font-size: 12px;
+    font-size: 11px;
     color: #404040;
   }
 `;
 
 export const ResumoDoDia = styled.div`
-  display: grid;
+  border-bottom: 2px solid #f7f7f7;
   grid-template-columns: 1fr 0.8fr;
   align-items: center;
-  border-bottom: 2px solid #f7f7f7;
-  margin-top: 8px;
-  padding-bottom: 6px;
+  margin-top: 4px;
+  display: grid;
+  padding: 4px;
 
   strong {
     color: #818181;
-    font-size: 0.85em;
+    font-size: 14px;
     font-weight: 600;
   }
 
@@ -61,7 +70,6 @@ export const ResumoDoDia = styled.div`
     border-radius: 4px;
     display: flex;
     margin-bottom: 4px;
-
     justify-content: space-between;
     gap: 4px;
 
@@ -112,12 +120,12 @@ export const ResumoDoDia = styled.div`
 `;
 
 export const InfoExtra = styled.div`
-  margin-top: 10px;
+  margin-top: 12px;
   display: flex;
-  gap: 10px;
+  gap: 6px;
   border-radius: 6px;
   border-left: 4px solid;
-  padding-left: 4px;
+  padding: 6px;
 
   background: ${({ status }) => (status == "maxima" ? "#ffecec" : "#ECFBFF")};
   border-color: ${({ status }) => (status == "maxima" ? "#ff8a8a" : "#41b4d9")};
@@ -125,14 +133,12 @@ export const InfoExtra = styled.div`
   p {
     color: ${({ status }) => (status == "maxima" ? "#ff8a8a" : "#41b4d9")};
     text-align: left;
-    font-size: 10px;
-    width: 80%;
+    font-size: 11px;
   }
 
   img {
     object-fit: contain;
-    display: block;
-    width: 10%;
+    width: 26px;
   }
 
   & + & {

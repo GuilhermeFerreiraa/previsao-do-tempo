@@ -1,33 +1,29 @@
 import styled from "styled-components";
 
 export const Caixa = styled.main`
-  box-sizing: border-box;
-  max-width: 100vw;
-  scroll-behavior: smooth;
-  font-family: "Inter", "sans-serif", "arial";
+  min-height: 90%;
+  padding-top: 24px;
 `;
 
 export const CaixaTopo = styled.div`
-  width: 80%;
-  padding: 8px;
-  margin: 16px auto;
-  background-color: "#eee";
-  border-radius: 12px;
-  border-top: 16px solid #079e99;
-  align-items: center;
   box-shadow: 0px 4px 4px #00000025;
+  border-top: 16px solid #079e99;
+  background-color: "#eee";
+  border-radius: 10px;
+  align-items: center;
+  margin: 20px auto;
+  padding: 18px;
+  width: 85%;
 
   h1 {
-    font-size: 1.2em;
     text-align: center;
+    font-size: 1.2em;
     font-weight: 500;
     color: #079e99;
   }
 `;
 
 export const CaixaBotao = styled.div`
-  background-color: red;
-  /* display: flex; */
   width: 15%;
 
   button {

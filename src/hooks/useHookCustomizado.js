@@ -32,21 +32,17 @@ export default function useHookCustomizado() {
     let timeoutId;
 
     const pegaDados = async () => {
-      try {
-        setIsLoading(true);
-        const resposta = await DadosDaPrevisao.obterDados();
+      setIsLoading(true);
 
-        timeoutId = setTimeout(() => {
-          if (resposta && resposta.data) {
-            setNomeDaCidade(resposta.name);
-            setDados(resposta.data);
-          }
-          setIsLoading(false);
-        }, 500);
-      } catch (error) {
+      const resposta = await DadosDaPrevisao.obterDados();
+
+      timeoutId = setTimeout(() => {
+        if (resposta && resposta.data) {
+          setNomeDaCidade(resposta.name);
+        }
         setIsLoading(false);
-        console.error("Não foi possível obter os dados: ", error);
-      }
+        setDados(resposta.data);
+      }, 1000);
     };
 
     pegaDados();

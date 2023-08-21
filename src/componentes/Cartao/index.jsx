@@ -9,7 +9,7 @@ export default function dados({
   diasDaSemana,
   mediaMax,
   mediaMin,
-  formataData
+  formataData,
 }) {
   return (
     <Caixa key={dados?.date}>
@@ -38,19 +38,24 @@ export default function dados({
         <strong>Umidade:</strong>
 
         <div className="umidade">
-          <span>{dados?.humidity?.min}%</span>
-          <span>-</span>
-          <span>{dados?.humidity?.max}%</span>
+          <span>
+            {`
+          ${dados?.humidity?.min}% 
+          - 
+          ${dados?.humidity?.max}%
+          `}
+          </span>
         </div>
       </ResumoDoDia>
 
       <ResumoDoDia>
         <strong>Sol:</strong>
-
         <div className="sol">
-          <span>{formataData(dados?.sun?.sunrise)}</span>
-          <span>-</span>
-          <span>{formataData(dados?.sun?.sunset)}</span>
+          <span>
+            {`${formataData(dados?.sun?.sunrise)} - ${formataData(
+              dados?.sun?.sunset
+            )}`}
+          </span>
         </div>
       </ResumoDoDia>
 
@@ -63,7 +68,7 @@ export default function dados({
       </ResumoDoDia>
 
       {dados?.temperature.max > mediaMax && (
-         <InfoExtra status={'maxima'}>
+        <InfoExtra status={"maxima"}>
           <img src={atencao} alt="icone-atencao" />
           <p>
             Temperatura máxima deste dia será superior a máxima média do
@@ -73,7 +78,7 @@ export default function dados({
       )}
 
       {dados?.temperature.min < mediaMin && (
-        <InfoExtra status={'minima'}>
+        <InfoExtra status={"minima"}>
           <img src={informacao} alt="icone-atencao" />
           <p>
             Temperatura mínima deste dia será inferior a mínima média do

@@ -1,12 +1,12 @@
 import { keyframes, styled } from "styled-components";
 
 export const CaixaCarregando = styled.div`
+  transform: translate(-50%);
   position: fixed;
   bottom: 48px;
   z-index: 2;
   left: 50%;
   top: 50%;
-  transform: translate(-50%);
 `;
 
 const iconeCarregando = keyframes`

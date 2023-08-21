@@ -12,11 +12,7 @@ export default function Carrosel() {
   const { dados, mediaMin, mediaMax, diasDaSemana, formataData } =
     useHookCustomizado();
 
-  const estiloCarrosel = {
-    maxWidth: "75%",
-    margin: "0 auto",
-    padding: "0 10px",
-  };
+  const estiloCarrosel = { maxWidth: "85%", padding: "0 10px" };
   const estiloItemCarrosel = { display: "flex", justifyContent: "center" };
 
   const breakpoints = {
