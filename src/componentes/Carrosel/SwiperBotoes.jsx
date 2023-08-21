@@ -1,6 +1,6 @@
 import { useSwiper } from "swiper/react";
 import { BotaoSlideEsquerda, BotaoSlideDireita } from "./estilo";
-import seta from "../../assets/icones/seta.svg";
+import seta from "../../../public/assets/icones/seta.svg";
 
 export default function SwiperBotoes() {
   const swiper = useSwiper();

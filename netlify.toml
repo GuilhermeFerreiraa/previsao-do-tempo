@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/api/*"
-  to = "http://apiadvisor.climatempo.com.br/api/:splat"
-  status = 200
-  force = true

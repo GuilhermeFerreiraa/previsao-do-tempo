@@ -1,9 +1,19 @@
-import { styled } from "styled-components";
+import { keyframes, styled } from "styled-components";
+
+const animacao = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+`;
 
 export const Caixa = styled.div`
   height: 80%;
   display: flex;
   align-items: center;
+  animation: ${animacao} 2s ease-in-out infinite;
 `;
 
 export const CaixaItem = styled.div`
