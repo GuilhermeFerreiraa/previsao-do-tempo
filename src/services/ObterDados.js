@@ -2,7 +2,7 @@ import axios from "axios";
 
 class DadosDaPrevisao {
   constructor() {
-    this.baseUrl = "/api/v1/forecast/locale/6754/days/15";
+    this.baseUrl = "https://apiadvisor.climatempo.com.br/api/v1/forecast/locale/6754/days/15";
   }
 
   async obterDados() {
