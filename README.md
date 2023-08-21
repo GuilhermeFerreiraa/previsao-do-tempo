@@ -1,8 +1,24 @@
-# React + Vite
+# Teste Frontend Culttivo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Aplicação desenvolvida com React JS, utilizando ferramentas como: Vite, Swiper, Axios & Styled Components. Hospedado na AWS Services.
 
-Currently, two official plugins are available:
+### AWS Services
+<div>
+ API Gateway | <img src="https://d1by4p17n947rt.cloudfront.net/icon/fb0cde6228b21d89ec222b45efec54e7-0856e92285f4e7ed254b2588d1fe1829.svg" w="42px" margin-left="10px" alt="api-gateway" /> 
+ Lambda |
+<img src="https://d1by4p17n947rt.cloudfront.net/icon/945f3fc449518a73b9f5f32868db466c-926961f91b072604c42b7f39ce2eaf1c.svg" w="42px" alt="lambda" />
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br />
+
+Link do projeto: http://culttivofrontend.s3-website.us-east-2.amazonaws.com
+
+### Instalação Local do Projeto:
+
+1 - Instalar dependências do projeto
+  * `git clone url deste repo`     
+  * `npm install`
+  * `npm run dev`
+#### Pronto, basta aproveitar o tempo :)
+
+<img src="https://cdn.discordapp.com/attachments/784133268592132107/1143213024568684646/127.0.0.1_5173_.png" alt="preview-site" />
