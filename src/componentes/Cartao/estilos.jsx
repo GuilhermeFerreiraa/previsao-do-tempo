@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Caixa = styled.div`
-  max-width: 320px;
-  max-height: 380px;
-  min-height: 380px;
+  overflow: hidden;
+  min-width: 80%;
+  height: 340px;
   margin: 10px 50px;
   padding: 16px 12px;
   border-radius: 12px;
@@ -32,10 +32,10 @@ export const InfoData = styled.div`
 
 export const Descricao = styled.div`
   background-color: #eee;
+  margin-bottom: 12px;
   border-radius: 8px;
-  padding: 2px 14px;
-
-  margin: 0 auto 12px;
+  padding: 2px 10px;
+  height: 50px;
 
   p {
     font-size: 12px;
@@ -45,7 +45,7 @@ export const Descricao = styled.div`
 
 export const ResumoDoDia = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 0.8fr;
   align-items: center;
   border-bottom: 2px solid #f7f7f7;
   margin-top: 8px;
@@ -77,6 +77,8 @@ export const ResumoDoDia = styled.div`
   }
 
   .temp {
+    gap: 10px;
+
     :first-child {
       color: #41b4d9;
       background-color: #ecf8ff;
@@ -110,25 +112,30 @@ export const ResumoDoDia = styled.div`
 `;
 
 export const InfoExtra = styled.div`
+  margin-top: 10px;
   display: flex;
-  justify-content: center;
-  margin-top: 12px;
+  gap: 10px;
   border-radius: 6px;
   border-left: 4px solid;
-  background: ${({ status }) => (status !== "danger" ? "#ecfaff" : "#FFECEC")};
-  border-color: ${({ status }) =>
-    status !== "danger" ? "#41B4D9" : "#ff8a8a"};
+  padding-left: 4px;
 
-  img {
-    /* margin-left: 12px; */
-    object-fit: contain;
-    width: 15%;
-  }
+  background: ${({ status }) => (status == "maxima" ? "#ffecec" : "#ECFBFF")};
+  border-color: ${({ status }) => (status == "maxima" ? "#ff8a8a" : "#41b4d9")};
 
   p {
+    color: ${({ status }) => (status == "maxima" ? "#ff8a8a" : "#41b4d9")};
     text-align: left;
-    width: 80%;
-    color: #41b4d9;
     font-size: 10px;
+    width: 80%;
+  }
+
+  img {
+    object-fit: contain;
+    display: block;
+    width: 10%;
+  }
+
+  & + & {
+    margin-top: 6px;
   }
 `;

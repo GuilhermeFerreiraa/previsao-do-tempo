@@ -2,8 +2,15 @@ import { Caixa, InfoData, Descricao, InfoExtra, ResumoDoDia } from "./estilos";
 
 import sol from "../../assets/icones/sol.svg";
 import atencao from "../../assets/icones/atencao.svg";
+import informacao from "../../assets/icones/informacao.svg";
 
-export default function dados({ dados, diasDaSemana, formataData }) {
+export default function dados({
+  dados,
+  diasDaSemana,
+  mediaMax,
+  mediaMin,
+  formataData
+}) {
   return (
     <Caixa key={dados?.date}>
       <InfoData>
@@ -55,13 +62,25 @@ export default function dados({ dados, diasDaSemana, formataData }) {
         </div>
       </ResumoDoDia>
 
-      <InfoExtra status={"dangerr"}>
-        <img src={atencao} alt="icone-atencao" />
-        <p>
-          Temperatura mínima deste dia será inferior a mínima média do período.
-          Temperatura máxima deste dia será superior a máxima média do período.
-        </p>
-      </InfoExtra>
+      {dados?.temperature.max > mediaMax && (
+         <InfoExtra status={'maxima'}>
+          <img src={atencao} alt="icone-atencao" />
+          <p>
+            Temperatura máxima deste dia será superior a máxima média do
+            período.
+          </p>
+        </InfoExtra>
+      )}
+
+      {dados?.temperature.min < mediaMin && (
+        <InfoExtra status={'minima'}>
+          <img src={informacao} alt="icone-atencao" />
+          <p>
+            Temperatura mínima deste dia será inferior a mínima média do
+            período.
+          </p>
+        </InfoExtra>
+      )}
     </Caixa>
   );
 }

@@ -44,7 +44,7 @@ const animacaoRotacional = keyframes`
 `;
 
 export const SpinnerEstilizado = styled.div`
-  color: "#fefe00";
+  color: #41b4d9;
   font-size: 60px;
   width: 1em;
   height: 1em;
