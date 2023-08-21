@@ -1,4 +1,4 @@
-import nuvemTriste from "../../public/assets/images/nuvem_triste.gif";
+import nuvemTriste from "..//assets/images/nuvem_triste.gif";
 import { Caixa, CaixaItem } from "./estilos";
 
 export default function DadosNaoEncontrados() {

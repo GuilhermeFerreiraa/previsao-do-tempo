@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Caixa = styled.div`
   overflow: hidden;
   min-width: 70%;
-  height: 380px;
+  height: fit-content;
+  min-height: 340px;
   margin: 10px 50px;
   padding: 16px 16px;
   border-radius: 12px;

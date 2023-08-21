@@ -1,8 +1,8 @@
 import { Caixa, InfoData, Descricao, InfoExtra, ResumoDoDia } from "./estilos";
 
-import sol from "../../../public/assets/icones/sol.svg";
-import atencao from "../../../public/assets/icones/atencao.svg";
-import informacao from "../../../public/assets/icones/informacao.svg";
+import sol from "../../assets/icones/sol.svg";
+import atencao from "../../assets/icones/atencao.svg";
+import informacao from "../../assets/icones/informacao.svg";
 
 export default function dados({
   dados,
