@@ -1,8 +1,15 @@
-# React + Vite
+# Teste Frontend Culttivo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Aplicação desenvolvida com React JS, utilizando ferramentas como: Vite, Swiper, Axios & Styled Components. Hospedado na AWS Services.
 
-Currently, two official plugins are available:
+Link do projeto: http://culttivofrontend.s3-website.us-east-2.amazonaws.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Instalação Local do Projeto:
+
+1 - Instalar dependências do projeto
+  * git clone url deste repo     
+  * npm install
+  * npm run dev
+#### Pronto, basta aproveitar o tempo :)
+
+<img src="https://cdn.discordapp.com/attachments/784133268592132107/1143213024568684646/127.0.0.1_5173_.png" alt="preview-site" />
